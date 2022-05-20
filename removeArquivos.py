@@ -16,8 +16,6 @@ for fname in files:
         print(fname," - Arquivo movido")
         shutil.copy2(os.path.join(src, fname), trg)
         arquivoTotal = src+fname
-        #if os.path.exists(arquivoTotal):
         os.remove(arquivoTotal)
-        #shutil.move(src, trg)
 print (f"\nO diretório ({src}) não contem arquivos com a extensão ({ext}) para apagar!! \n" if not guardaNum else f"Total de {len(guardaNum)} arquivos foram apagados e movidos para a pasta {trg}")
 os.system("pause")
